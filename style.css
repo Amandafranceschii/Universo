@@ -2,68 +2,38 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: black;
-  overflow: hidden;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(to bottom, #fdfbfb, #ebedee);
   height: 100vh;
+  display: flex;
   flex-direction: column;
-}
-
-#senha-container {
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-#senha {
-  padding: 10px;
-  font-size: 16px;
-  margin-top: 10px;
+.mensagem h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-#mensagem-erro {
-  color: red;
-  margin-top: 10px;
-}
-
-#conteudo {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-.stars {
-  background: url('https://media.giphy.com/media/l0HlRmz6cC8dVZ2i4/giphy.gif') no-repeat center center/cover;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  opacity: 0.6;
-  z-index: 1;
-}
-
-.message-box {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  animation: fadeIn 3s ease-in-out forwards;
-}
-
-.message-box h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.message-box p {
+.mensagem p {
   font-size: 1.2em;
+  color: #555;
 }
 
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+.avatar {
+  position: absolute;
+  bottom: 10px;
+  width: 120px;
+  animation: correr 4s infinite linear;
+}
+
+.avatar img {
+  width: 100%;
+}
+
+@keyframes correr {
+  0% { left: -150px; }
+  100% { left: 110%; }
 }
